@@ -4,11 +4,11 @@ body{
     line-height: 24px;
     margin: 0;
     background: linear-gradient( /*para el color del fondo*/
-        to bottom,
-        #e06a9c 0%,
+        to bottom, /*bottom: va de arriba hacia abajo*/
+        #e06a9c 0%, /*el % indica en que punto del recorrido aparece ese color, indican porciones de tamaño*/
         #b94f79 10%,
         #5a243a 20%,
-        #000000 40%,
+        #0e0006 40%,
         #000000 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -18,7 +18,7 @@ body{
 }
 
 .ancho{
-    max-width: 1300px;
+    max-width: 1380px;
     margin: auto;
     height: 50px;
     display: flex;
@@ -64,7 +64,7 @@ header{
 }
 
 .contenedores{
-    padding: 170px;
+    padding: 250px;
 }
 .contenedores h1{
     color: white;
@@ -72,15 +72,18 @@ header{
     line-height: 50px;
 }
 
-.contenedores p{
+.primerparrafo{
     color: white;
-    font-size: 20px;
+    font-size: 20px; /*esta sobreescribiendo el texto de abajo*/
+}
+.textoprincipal span{
+    margin-top: 30px;
 }
 .textoprincipal span{
     display: flex;
     gap:10px;
     background-color: #2E2E2E;
-    width: 300px;
+    width: 280px;
     height: 40px;
     color: white;
     justify-content: center;
@@ -89,4 +92,146 @@ header{
 }   
 .textoprincipal i{
     color: blue;
+}
+
+.botones{
+    margin-top: 50px;
+}
+.btnrosa{
+    border:none;
+    background-color: #b94f79;
+    width: 270px;
+    height: 60px;
+    border-radius: 40px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.btnnegro{
+    background-color: #000;
+    color: white;
+    font-weight: bold;
+    width: 270px;
+    height: 60px;
+    border-radius: 40px;
+    border: 0.5px rgb(183, 176, 176) solid;
+    font-size: 20px;
+}
+.pbonito {
+    margin-top: 30px;
+    font-size: 15px;
+    color: white;
+}
+
+
+.TextoNota{
+    color:white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 210px;
+}
+.TextoNota h2{
+    font-size: 50px;
+    margin: 30px 0;
+    padding: 0;
+}
+.TextoNota h3{
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    line-height: 38px;
+}
+
+
+/*CREAR UN GRID, SUPONGO*/
+
+.tabla-comparativa {
+  color: #fff;
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr; /* ajusta proporciones aquí */
+  width: 600px;
+  margin:100px auto;
+}
+
+.encabezado-col {
+  padding: 12px 16px 24px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+/*LINEA*/
+.separador { 
+  grid-column: 1 / -1; /* ocupa todas las columnas */
+  border: none;
+  border-top: 1px solid #444;
+  margin: 0;
+}
+
+.celda {
+  padding: 16px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.celda.centro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*PLANES ACCESIBLES PARA CADA SITUACIÓN*/
+.nuevotexto{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px;
+}
+.nuevotexto h2{
+    font-size: 46px;
+    margin-bottom: 30px;
+}
+.nuevotexto p{
+    font-size: 20px;
+    text-align: center;
+    margin-top:0;
+}
+
+.contenedoriconos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:20px;
+}
+.contenedoriconos i{
+    font-size: 80px;
+}
+
+/*DESPUES DE TARJETAS*/
+.contenedorPrincipal{
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap:70px; 
+    margin-top: 70px;
+}
+.contenedorTitulo h2{
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+}
+.contenedorLista ul{
+    list-style: none;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
 }
