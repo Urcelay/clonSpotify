@@ -4,18 +4,17 @@ body{
     line-height: 24px;
     margin: 0;
     background: linear-gradient( /*para el color del fondo*/
-        to bottom, /*bottom: va de arriba hacia abajo*/
+         /*bottom: va de arriba hacia abajo*/
         #e06a9c 0%, /*el % indica en que punto del recorrido aparece ese color, indican porciones de tamaño*/
         #b94f79 10%,
         #5a243a 20%,
         #0e0006 40%,
         #000000 100%);
-    background-repeat: no-repeat;
+
     background-attachment: fixed;
 }
-.margin{
-    padding: 20px 30px;
-}
+
+
 
 .ancho{
     max-width: 1380px;
@@ -234,4 +233,120 @@ header{
     font-weight: bold;
     font-size: 20px;
     line-height: 30px;
+}
+
+/*contenedores grandes*/
+.Contenedores-grandes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:40px;
+    align-content: center;
+    max-width: 1600px; /*lo maximo para esta seccion son 1600px*/
+    margin-top: 50px;
+    background-color: #0A0909;
+
+}
+.primer-contenedor,
+.segundo-contenedor,
+.tercero-contenedor,
+.cuarto-contenedor{
+    width: 425px; /*por lo tanto cada hijo como máximo debe medir 400px*/
+    height: 700px;
+    border-radius: 15px;
+    font-weight: bold;
+    background-color: #211F1F;
+
+}
+.etiqueta {
+    border-radius: 12px 0px;
+    background-color: pink;
+    width: 150px;
+    height: 30px;
+}
+.primer-contenedor h4, li,
+.segundo-contenedor h4, li,
+.tercero-contenedor h4, li,
+.cuarto-contenedor h4, li{
+    color: white;
+}
+
+.primer-contenedor .tresmeses,
+.segundo-contenedor .tresmeses,
+.tercero-contenedor .tresmeses,
+.cuarto-contenedor .tresmeses{
+    color:white;
+}
+.individual{
+    color: pink;
+    font-size: 35px;
+}
+.estudiantes{
+    color: plum;
+    font-size: 35px;
+}
+.duo{
+    color:yellow;
+    font-size: 35px;
+}
+.familiar{
+    color: #8EB9F5;
+    font-size: 35px;
+}
+.primer-contenedor .despues,
+.segundo-contenedor .despues,
+.tercero-contenedor .despues,
+.cuarto-contenedor .despues{
+    color: #757575;
+}
+/*botones*/
+.botones{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+}
+.botones button{
+    width: 325px;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 18px;
+}
+.btn-oscuro{
+    margin-top: 20px;
+    color:white;
+    background-color: #2a2a2a;
+}
+.btn-rosa{
+    background-color: pink;
+    font-weight: bold;
+}
+.btn-morado{
+    background-color: plum;
+    font-weight: bold;
+}
+.btn-amarillo{
+    background-color: #FCD528;
+    font-weight: bold;
+}
+.btn-azull{
+    background-color: #8EB9F5;
+    font-weight: bold;
+}
+.parrafo{
+    color: #444;
+    text-align: center;
+    font-size: 15px;
+}
+.separado2{
+    width: 380px;
+    height: 0.1px; 
+    background-color: #696767;
+}
+.logopremium{
+    font-size: 20px;
+    display: flex;
+    gap:10px;
 }
