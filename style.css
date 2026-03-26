@@ -3,30 +3,37 @@ body{
     font-size: 16px;
     line-height: 24px;
     margin: 0;
-    background: linear-gradient( /*para el color del fondo*/
-         /*bottom: va de arriba hacia abajo*/
-        #e06a9c 0%, /*el % indica en que punto del recorrido aparece ese color, indican porciones de tamaño*/
+    background: linear-gradient(
+        #e06a9c 0%,
         #b94f79 10%,
         #5a243a 20%,
         #0e0006 40%,
-        #000000 100%);
-
+        #000000 100%
+    );
     background-attachment: fixed;
 }
 
-
-
+/* ancho general */
 .ancho{
     max-width: 1380px;
     margin: auto;
+}
+
+/* header */
+
+header{
+    background-color: black;
+}
+
+.margin{
+    padding:15px;
+}
+
+.header .ancho{
     height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-header{
-    background-color: black;
 }
 
 .contenedoricono{
@@ -46,7 +53,6 @@ header{
     color: white;
 }
 
-
 .contenedormenu ul{
     list-style: none;
     display: flex;
@@ -62,40 +68,54 @@ header{
     cursor: pointer;
 }
 
+/* SECCION PRINCIPAL */
+
 .contenedores{
-    padding: 250px;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
 }
-.contenedores h1{
+
+.textoprincipal{
     color: white;
-    font-size: 50px;
+}
+
+.contenedores h1{
+    font-size: 55px;
     line-height: 50px;
 }
 
 .primerparrafo{
-    color: white;
-    font-size: 20px; /*esta sobreescribiendo el texto de abajo*/
+    font-size: 20px;
 }
+
 .textoprincipal span{
     margin-top: 30px;
-}
-.textoprincipal span{
     display: flex;
     gap:10px;
     background-color: #2E2E2E;
     width: 280px;
     height: 40px;
-    color: white;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
-}   
+}
+
 .textoprincipal i{
     color: blue;
 }
 
-.botones{
+/* BOTONES PRINCIPALES */
+
+.botones-principales{
     margin-top: 50px;
+    display: flex;
+    gap:20px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
+
 .btnrosa{
     border:none;
     background-color: #b94f79;
@@ -104,7 +124,9 @@ header{
     border-radius: 40px;
     font-weight: bold;
     font-size: 20px;
+    margin-top: 30px;
 }
+
 .btnnegro{
     background-color: #000;
     color: white;
@@ -115,244 +137,155 @@ header{
     border: 0.5px rgb(183, 176, 176) solid;
     font-size: 20px;
 }
-.pbonito {
-    margin-top: 30px;
+
+.pbonito{
+    margin-top: 20px;
     font-size: 15px;
     color: white;
+    max-width: 600px;
 }
 
+/* imagen principal */
+
+.imagen img{
+    width: 500px;
+}
+
+/* TEXTO NOTA */
 
 .TextoNota{
     color:white;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 210px;
+    text-align: center;
+    margin-top: 150px;
 }
+
 .TextoNota h2{
     font-size: 50px;
-    margin: 30px 0;
-    padding: 0;
 }
+
 .TextoNota h3{
     font-size: 30px;
-    margin: 0;
-    padding: 0;
     font-weight: normal;
-    line-height: 38px;
 }
 
+/* GRID */
 
-/*CREAR UN GRID, SUPONGO*/
-
-.tabla-comparativa {
-  color: #fff;
-  padding: 24px;
-  border-radius: 12px;
+.grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    width: 600px;
+    margin:100px auto;
+    color:white;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr; /* ajusta proporciones aquí */
-  width: 600px;
-  margin:100px auto;
+.encabezado-col{
+    padding: 12px;
+    font-weight: bold;
 }
 
-.encabezado-col {
-  padding: 12px 16px 24px;
-  font-weight: 700;
-  font-size: 1.1rem;
-  line-height: 1.2;
+.separador{
+    grid-column: 1 / -1;
+    border-top: 1px solid #444;
 }
 
-/*LINEA*/
-.separador { 
-  grid-column: 1 / -1; /* ocupa todas las columnas */
-  border: none;
-  border-top: 1px solid #444;
-  margin: 0;
+.celda{
+    padding: 16px;
+    border-bottom: 1px solid #2a2a2a;
 }
 
-.celda {
-  padding: 16px;
-  border-bottom: 1px solid #2a2a2a;
+.centro{
+    display:flex;
+    justify-content:center;
 }
 
-.celda.centro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+/* NUEVO TEXTO */
 
-/*PLANES ACCESIBLES PARA CADA SITUACIÓN*/
 .nuevotexto{
     color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    line-height: 30px;
+    text-align: center;
 }
+
 .nuevotexto h2{
     font-size: 46px;
-    margin-bottom: 30px;
 }
+
 .nuevotexto p{
     font-size: 20px;
-    text-align: center;
-    margin-top:0;
 }
 
 .contenedoriconos{
     display: flex;
-    flex-direction: row;
     justify-content: center;
     gap:20px;
-}
-.contenedoriconos i{
-    font-size: 80px;
+    font-size: 60px;
 }
 
-/*DESPUES DE TARJETAS*/
+/* PLANES */
+
 .contenedorPrincipal{
     color: white;
     display: flex;
     justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    gap:70px; 
+    gap:70px;
     margin-top: 70px;
 }
-.contenedorTitulo h2{
-    font-size: 40px;
-    line-height: 50px;
-    text-align: center;
-}
+
 .contenedorLista ul{
     list-style: none;
     font-weight: bold;
-    font-size: 20px;
-    line-height: 30px;
 }
 
-/*contenedores grandes*/
+/* CONTENEDORES GRANDES */
+
 .Contenedores-grandes{
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap:40px;
-    align-content: center;
-    max-width: 1600px; /*lo maximo para esta seccion son 1600px*/
     margin-top: 50px;
     background-color: #0A0909;
-
+    padding:40px;
 }
+
 .primer-contenedor,
 .segundo-contenedor,
 .tercero-contenedor,
 .cuarto-contenedor{
-    width: 425px; /*por lo tanto cada hijo como máximo debe medir 400px*/
+    width: 425px;
     height: 700px;
     border-radius: 15px;
-    font-weight: bold;
     background-color: #211F1F;
-
-}
-.etiqueta {
-    border-radius: 12px 0px;
-    background-color: pink;
-    width: 150px;
-    height: 30px;
-}
-.primer-contenedor h4, li,
-.segundo-contenedor h4, li,
-.tercero-contenedor h4, li,
-.cuarto-contenedor h4, li{
-    color: white;
-}
-
-.primer-contenedor .tresmeses,
-.segundo-contenedor .tresmeses,
-.tercero-contenedor .tresmeses,
-.cuarto-contenedor .tresmeses{
+    padding:20px;
     color:white;
 }
-.individual{
-    color: pink;
-    font-size: 35px;
-}
-.estudiantes{
-    color: plum;
-    font-size: 35px;
-}
-.duo{
-    color:yellow;
-    font-size: 35px;
-}
-.familiar{
-    color: #8EB9F5;
-    font-size: 35px;
-}
-.primer-contenedor .despues,
-.segundo-contenedor .despues,
-.tercero-contenedor .despues,
-.cuarto-contenedor .despues{
-    color: #757575;
-}
-/*botones*/
-.botones{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
 
+/* BOTONES TARJETAS */
+
+.botones-tarjetas{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    margin-top: 20px;
 }
-.botones button{
-    width: 325px;
+
+.botones-tarjetas button{
+    width: 100%;
     height: 50px;
     border-radius: 30px;
     font-size: 18px;
 }
+
 .btn-oscuro{
-    margin-top: 20px;
     color:white;
     background-color: #2a2a2a;
 }
-.btn-rosa{
-    background-color: pink;
-    font-weight: bold;
-}
-.btn-morado{
-    background-color: plum;
-    font-weight: bold;
-}
-.btn-amarillo{
-    background-color: #FCD528;
-    font-weight: bold;
-}
-.btn-azull{
-    background-color: #8EB9F5;
-    font-weight: bold;
-}
-.parrafo{
-    color: #444;
-    text-align: center;
-    font-size: 15px;
-}
-.separado2{
-    width: 380px;
-    height: 0.1px; 
-    background-color: #696767;
-}
-.logopremium{
-    font-size: 20px;
-    display: flex;
-    gap:10px;
-}
 
+.btn-rosa{ background:pink; }
+.btn-morado{ background:plum; }
+.btn-amarillo{ background:#FCD528; }
+.btn-azull{ background:#8EB9F5; }
 
-/*BENTO GRID*/
+/* BENTO */
 
 .bento{
     width:1200px;
@@ -365,98 +298,70 @@ header{
 }
 
 .item{
-    background:#d9d9d9;
     border-radius:20px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:25px;
 }
 
-/* tamaños */
-
-.item1{
-    grid-column: span 2;
-    grid-row: span 2;
-    border: 2px white solid;
-}
-.item1 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /*llena el contenedor y recorta bordes*/
-    border-radius: 20px;
-}
-.item2{
-    grid-column: span 2;
-    grid-row: span 2;
-    border: 2px white solid;
-}
-.item2 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /*llena el contenedor y recorta bordes*/
-    border-radius: 20px;
-}
-.item3{
-    grid-row: span 2;
-    border: 2px white solid;
-}
-.item3 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /*llena el contenedor y recorta bordes*/
-    border-radius: 20px;
-}
-.item4{
-    grid-column: span 2;
-    grid-row: span 2;
-    border: 2px white solid;
-}
-.item4 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /*llena el contenedor y recorta bordes*/
-    border-radius: 20px;
-}
-.item5{
-    grid-column: span 1;
-    border: 2px white solid;
-}
-.item5 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /*llena el contenedor y recorta bordes*/
-    border-radius: 20px;
+.item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:20px;
 }
 
-.item6{
-    grid-column: span 1;
-    border: 2px white solid;
+.item1{ grid-column: span 2; grid-row: span 2; }
+.item2{ grid-column: span 2; grid-row: span 2; }
+.item3{ grid-row: span 2; }
+.item4{ grid-column: span 2; grid-row: span 2; }
+.item7{ grid-column: span 2; }
+.item8{ grid-column: span 2; }
+
+/*FOOTER*/
+.footer{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: center;
+    margin-top:150px;
+    padding-top: 50px;
+    gap:100px;
+    background-color: #090909;
+    height: 200px;
 }
-.item6 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /*llena el contenedor y recorta bordes*/
-    border-radius: 20px;
+.logofooter{
+    font-size: 50px;
 }
-.item7{
-    grid-column: span 2;
-    border: 2px white solid;
+.compañia ul{
+    list-style: none;
 }
-.item7 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /*llena el contenedor y recorta bordes*/
-    border-radius: 20px;
+.compañia span{
+    color: rgb(165, 163, 164);
+    font-size: 20px;
+}
+.comunidades ul{
+    list-style: none;
+}
+.comunidades span{
+    color: rgb(165, 163, 164);
+    font-size: 20px;
+}
+.enlaces-utiles ul{
+    list-style: none;
+}
+.enlaces-utiles span{
+    color: rgb(165, 163, 164);
+    font-size: 20px;
 }
 
-.item8{
-    grid-column: span 2;
-    border: 2px white solid;
+.planes-spotify ul{
+    list-style: none;
 }
-.item8 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /*llena el contenedor y recorta bordes*/
-    border-radius: 20px;
+.planes-spotify span{
+    color: rgb(165, 163, 164);
+    font-size: 20px;
+}
+.logos{
+    display: flex;
+    gap:20px;
+    height: 50px;
+    font-size: 30px;
 }
